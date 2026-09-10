@@ -1,0 +1,60 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: fix/updatego
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/openaire/DSpace:
+      branch: master
+      repo: https://github.com/openaire/DSpace
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/openaire/DSpace git:
+        commands:
+        - /usr/bin/env sh .sqa/script.blush_sweet_fox.sh
+        container: qc.acc_flamingo_anxious_wildcat
+  QC.Doc:
+    repos:
+      github.com/openaire/DSpace find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.espresso_vigilant_jellyfish.sh
+        container: qc.doc_jet_daring_sphinx
+      github.com/openaire/DSpace git:
+        commands:
+        - /usr/bin/env sh .sqa/script.dusk_eccentric_iguana.sh
+        container: qc.doc_chartreuse_clever_narwhal
+      github.com/openaire/DSpace markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.byzantium_brave_cormorant.sh
+        container: qc.doc_mustard_unique_pegasus
+  QC.Lic:
+    repos:
+      github.com/openaire/DSpace licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.copper_trustworthy_phoenix.sh
+        container: qc.lic_avocado_scrappy_skunk
+  QC.Sty:
+    repos:
+      github.com/openaire/DSpace checkstyle:
+        commands:
+        - /usr/bin/env sh .sqa/script.butterscotch_radiant_dragon.sh
+        container: qc.sty_clove_amused_boa
+      github.com/openaire/DSpace hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.currant_optimistic_caribou.sh
+        container: qc.sty_dahlia_brilliant_kangaroo
+      github.com/openaire/DSpace jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.lavender_spontaneous_dhole.sh
+        container: qc.sty_dawn_happy_cassowary
+  QC.Ver:
+    repos:
+      github.com/openaire/DSpace get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.heather_outgoing_dingo.sh
+        container: qc.ver_strawberry_loyal_tarantula
+timeout: 5400
