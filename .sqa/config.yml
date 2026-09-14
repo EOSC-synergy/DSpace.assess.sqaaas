@@ -15,46 +15,46 @@ sqa_criteria:
     repos:
       github.com/openaire/DSpace git:
         commands:
-        - /usr/bin/env sh .sqa/script.zinnia_wise_goose.sh
-        container: qc.acc_storm_nervous_baboon
+        - /usr/bin/env sh .sqa/script.claret_nervous_eel.sh
+        container: qc.acc_mango_brave_fox
   QC.Doc:
     repos:
       github.com/openaire/DSpace find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.cinnabar_sad_squid.sh
-        container: qc.doc_pearl_timid_goose
+        - /usr/bin/env sh .sqa/script.apricot_sad_elk.sh
+        container: qc.doc_burgundy_warm_hamster
       github.com/openaire/DSpace git:
         commands:
-        - /usr/bin/env sh .sqa/script.porcelain_kind_kangaroo.sh
-        container: qc.doc_lime_savvy_mink
+        - /usr/bin/env sh .sqa/script.brown_balanced_cheetah.sh
+        container: qc.doc_glacier_tenacious_dragon
       github.com/openaire/DSpace markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.cayenne_apathetic_seahorse.sh
-        container: qc.doc_olive_vibrant_panther
+        - /usr/bin/env sh .sqa/script.celadon_grumpy_flounder.sh
+        container: qc.doc_peach_vigilant_giraffe
   QC.Lic:
     repos:
       github.com/openaire/DSpace licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.mahogany_shy_ferret.sh
-        container: qc.lic_pearl_dizzy_donkey
+        - /usr/bin/env sh .sqa/script.ochre_gentle_flounder.sh
+        container: qc.lic_bone_adaptable_badger
   QC.Sty:
     repos:
       github.com/openaire/DSpace checkstyle:
         commands:
-        - /usr/bin/env sh .sqa/script.emerald_honest_octopus.sh
-        container: qc.sty_jasmine_rational_iguana
+        - /usr/bin/env sh .sqa/script.wheat_rustic_octopus.sh
+        container: qc.sty_flax_patient_wildcat
       github.com/openaire/DSpace hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.grape_helpful_capybara.sh
-        container: qc.sty_celadon_diplomatic_unicorn
+        - /usr/bin/env sh .sqa/script.white_clever_pelican.sh
+        container: qc.sty_smoke_sociable_salamander
       github.com/openaire/DSpace jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.marigold_tactful_komodo.sh
-        container: qc.sty_ceru_unique_echidna
+        - /usr/bin/env sh .sqa/script.gamboge_driven_opossum.sh
+        container: qc.sty_ebony_romantic_boa
   QC.Ver:
     repos:
       github.com/openaire/DSpace get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.cayenne_mysterious_frog.sh
-        container: qc.ver_linen_alert_phoenix
+        - /usr/bin/env sh .sqa/script.emerald_cheerful_quoll.sh
+        container: qc.ver_pearl_bubbly_pelican
 timeout: 5400
